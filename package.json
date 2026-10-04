@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "pg": "^8.16.3",
+    "puppeteer": "^25.8.0"
+  },
+  "name": "aut-brt-filap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "cross-env PUPPETEER_CACHE_DIR=./.cache/puppeteer node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "cross-env": "^10.1.0"
+  }
+}
