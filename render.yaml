@@ -2,17 +2,16 @@ services:
   - type: web
     name: bdris-autofill
     runtime: node
-    buildCommand: npm install
+    region: singapore
+    buildCommand: npm install && npx puppeteer browsers install chrome
     startCommand: node server.js
     healthCheckPath: /ping
     envVars:
-      - key: DATABASE_URL
-        sync: false
       - key: ADMIN_USERNAME
         sync: false
       - key: ADMIN_PASSWORD
         sync: false
       - key: AUTH_SECRET
-        sync: false
+        generateValue: true
       - key: BASE_RATE
         value: "4"
